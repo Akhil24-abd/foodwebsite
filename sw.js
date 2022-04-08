@@ -26,7 +26,7 @@ self.addEventListener('fetch', e => {
      var document = document.querySelector(".btn");
      document.addEventListener("click", async () => {
      var swRegistration = await navigator.serviceWorker.register("sw.js");
-     swRegistration.sync.register("helloSync").then(function () {
+     swRegistration.sync.register("helloSync").then(function displayNotification() {
      console.log("Sync success");
      });
      });
