@@ -8,7 +8,7 @@ if("serviceWorker" in navigator){
    })
 }
 
-var cacheName = 'geeks-cache-v1';
+var cacheName = 'blog-img-1.jpg';
 // Call Fetch Event
 self.addEventListener('fetch', e => {
 console.log('Service Worker: Fetching');
