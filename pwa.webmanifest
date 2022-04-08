@@ -1,6 +1,6 @@
 {
-    "name": "Green Desire",
-    "short_name": "Green Desire",
+    "name": "Food App",
+    "short_name": "Food App",
     "description": "Progressive Web App feature added in our application",
     "icons": [
         {
@@ -14,8 +14,8 @@
             "type":"image/png"
         }
     ],
-    "id":"https://riyaz2014.github.io/foodwebsite/",
-    "start_url": "https://riyaz2014.github.io/foodwebsite/",
+    "id":"https://github.com/Akhil24-abd/foodwebsite/",
+    "start_url": "https://github.com/Akhil24-abd/foodwebsite/",
     "display": "fullscreen",
     "theme_color": "#00FF00",
     "background_color": "#FFFFFF",
