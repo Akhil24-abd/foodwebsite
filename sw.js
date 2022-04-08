@@ -1,3 +1,58 @@
+var cacheName = 'blog-img-1.jpg';
+self.addEventListener('fetch', e => {
+  console.log('Service Worker: Fetching');
+  e.respondWith(
+  fetch(e.request)
+  .then(res => {
+  // The response is a stream and in order the browser
+  // to consume the response and in the same time the
+  // cache consuming the response it needs to be
+  // cloned in order to have two streams.
+  const resClone = res.clone();
+  // Open cache
+  caches.open(cacheName)
+  .then(cache => {
+  // Add response to cache
+  cache.put(e.request, resClone);
+  });
+  return res;
+  }).catch(
+  err => caches.match(e.request)
+  .then(res => res)
+  )
+  );
+  });
+  
+  document.querySelector("button").addEventListener("click", async () => {
+     var swRegistration = await navigator.serviceWorker.register("sw.js");
+     swRegistration.sync.register("helloSync").then(function () {
+     console.log("Sync success");
+     });
+     });
+     function displayNotification() {
+     if (Notification.permission == 'granted') {
+     navigator.serviceWorker.getRegistration().then(function(reg) {
+     reg.showNotification('Hello world!');
+     });
+     }
+     }
+     function myFunction() {
+     const button = document.getElementById('notifications');
+     button.addEventListener('click', () => {
+     console.log("Ask for permission");
+     Notification.requestPermission().then((result) => {
+     if (result === 'granted') {
+     Notification.requestPermission(function(status) {
+     console.log('Notification permission status:', status);
+     navigator.serviceWorker.getRegistration().then(function(reg) {
+     reg.showNotification('Hello world!');
+     });
+     });
+     }
+     });
+     })
+     }
+     
 self.addEventListener('install' , (event)=>{
     console.log("sw is installed")
     event.waitUntil(
