@@ -8,7 +8,6 @@ if("serviceWorker" in navigator){
    })
 }
 
-
 // Call Fetch Event
 
 menuBtn.onclick = () =>{
