@@ -23,21 +23,21 @@ self.addEventListener('fetch', e => {
   );
   });*/
 
-    var element = document.querySelector("btn");
-    element.addEventListener("click", async () => {
+     var element = document.querySelector("btn");
+     element.addEventListener("click", async () => {
      var swRegistration = await navigator.serviceWorker.register("sw.js");
      swRegistration.sync.register("helloSync").then(function () {
      console.log("Sync success");
      });
      });
-     function displayNotification() {
+     /*function displayNotification() {
      if (Notification.permission == 'granted') {
      navigator.serviceWorker.getRegistration().then(function(reg) {
      reg.showNotification('Hello world!');
      });
      }
      }
-     function myFunction() {
+     /*function myFunction() {
      const btn = document.getElementById('notifications');
      button.addEventListener('click', () => {
      console.log("Ask for permission");
@@ -52,7 +52,7 @@ self.addEventListener('fetch', e => {
      }
      });
      })
-     }
+     }*/
      
 self.addEventListener('install' , (event)=>{
     console.log("sw is installed")
