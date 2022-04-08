@@ -38,7 +38,7 @@ self.addEventListener('fetch', e => {
      });
      }
      }
-     function myFunction() {
+     /*function myFunction() {
      const btn = document.getElementById('notifications');
      button.addEventListener('click', () => {
      console.log("Ask for permission");
@@ -53,7 +53,7 @@ self.addEventListener('fetch', e => {
      }
      });
      })
-     }
+     }*/
      
 self.addEventListener('install' , (event)=>{
     console.log("sw is installed")
