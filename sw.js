@@ -1,4 +1,4 @@
-var cacheName = 'blog-img-1.jpg';
+/*var cacheName = 'blog-img-1.jpg';
 self.addEventListener('fetch', e => {
   console.log('Service Worker: Fetching');
   e.respondWith(
@@ -21,9 +21,9 @@ self.addEventListener('fetch', e => {
   .then(res => res)
   )
   );
-  });
+  });*/
   
-  /*document.querySelector("button").addEventListener("click", async () => {
+document.querySelector("button").addEventListener("click", async () => {
      var swRegistration = await navigator.serviceWorker.register("sw.js");
      swRegistration.sync.register("helloSync").then(function () {
      console.log("Sync success");
@@ -51,7 +51,7 @@ self.addEventListener('fetch', e => {
      }
      });
      })
-     }*/
+     }
      
 self.addEventListener('install' , (event)=>{
     console.log("sw is installed")
