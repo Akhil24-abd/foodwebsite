@@ -30,14 +30,15 @@ self.addEventListener('fetch', e => {
      console.log("Sync success");
      });
      });
-     /*function displayNotification() {
+     
+     function displayNotification() {
      if (Notification.permission == 'granted') {
      navigator.serviceWorker.getRegistration().then(function(reg) {
      reg.showNotification('Hello world!');
      });
      }
      }
-     /*function myFunction() {
+     function myFunction() {
      const btn = document.getElementById('notifications');
      button.addEventListener('click', () => {
      console.log("Ask for permission");
@@ -52,7 +53,7 @@ self.addEventListener('fetch', e => {
      }
      });
      })
-     }*/
+     }
      
 self.addEventListener('install' , (event)=>{
     console.log("sw is installed")
