@@ -27,20 +27,20 @@ self.addEventListener('fetch', e => {
      document.addEventListener("click", async () => {
      var swRegistration = await navigator.serviceWorker.register("sw.js");
      swRegistration.sync.register("helloSync").then(function () {
-      displayNotification();
+      console.log('Sync Success');
      });
      })
      
-     function displayNotification() {
+     /*function displayNotification() {
      if (Notification.permission == 'granted') {
      navigator.serviceWorker.getRegistration().then(function(reg) {
      reg.showNotification('Hello world!');
      });
      }
-     }
-     /*function myFunction() {
-     const btn = document.getElementById('notifications');
-     button.addEventListener('click', () => {
+     }*/
+     function myFunction() {
+     const btn = document.querySelector(".btn:hover");
+     btn.addEventListener('click', () => {
      console.log("Ask for permission");
      Notification.requestPermission().then((result) => {
      if (result === 'granted') {
@@ -53,7 +53,7 @@ self.addEventListener('fetch', e => {
      }
      });
      })
-     }*/
+     }
      
 self.addEventListener('install' , (event)=>{
     console.log("sw is installed")
