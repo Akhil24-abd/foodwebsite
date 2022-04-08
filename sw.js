@@ -40,8 +40,8 @@ self.addEventListener('fetch', e => {
      }*/
 
      
-     const btn = document.querySelector(".btn");
-     btn.addEventListener('click', () => {
+     const document = document.querySelector(".btn");
+     document.addEventListener('click', () => {
      console.log("Ask for permission");
      Notification.requestPermission().then((result) => {
      if (result === 'granted') {
