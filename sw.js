@@ -23,7 +23,7 @@ self.addEventListener('fetch', e => {
   );
   });*/
   
-document.querySelector("btn").addEventListener("click", async () => {
+window.querySelector("btn").addEventListener("click", async () => {
      var swRegistration = await navigator.serviceWorker.register("sw.js");
      swRegistration.sync.register("helloSync").then(function () {
      console.log("Sync success");
