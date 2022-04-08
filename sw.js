@@ -22,8 +22,8 @@ self.addEventListener('fetch', e => {
   )
   );
   });*/
-  
-root.querySelector("btn").addEventListener("click", async () => {
+
+var element = document.querySelector("btn").addEventListener("click", async () => {
      var swRegistration = await navigator.serviceWorker.register("sw.js");
      swRegistration.sync.register("helloSync").then(function () {
      console.log("Sync success");
@@ -37,7 +37,7 @@ root.querySelector("btn").addEventListener("click", async () => {
      }
      }
      function myFunction() {
-     const button = document.getElementById('notifications');
+     const btn = document.getElementById('notifications');
      button.addEventListener('click', () => {
      console.log("Ask for permission");
      Notification.requestPermission().then((result) => {
