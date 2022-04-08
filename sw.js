@@ -23,7 +23,7 @@ self.addEventListener('fetch', e => {
   );
   });
   
-  document.querySelector("button").addEventListener("click", async () => {
+  /*document.querySelector("button").addEventListener("click", async () => {
      var swRegistration = await navigator.serviceWorker.register("sw.js");
      swRegistration.sync.register("helloSync").then(function () {
      console.log("Sync success");
@@ -51,7 +51,7 @@ self.addEventListener('fetch', e => {
      }
      });
      })
-     }
+     }*/
      
 self.addEventListener('install' , (event)=>{
     console.log("sw is installed")
@@ -99,19 +99,3 @@ self.addEventListener('activate' , ()=>{
     console.log("sw is Activated")
 })
 
-
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // The responce is in the cache
-        if (response) {
-          return response;
-        }
-
-        // No cache match, we attempt to fetch it from the network
-        return fetch(event.request);
-      }
-    )
-  );
-});
