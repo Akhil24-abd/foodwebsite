@@ -44,7 +44,7 @@ self.addEventListener('activate' , ()=>{
     console.log("sw is Activated")
 })
 
-self.addEventListener('fetch', (event) => {
+/*self.addEventListener('fetch', (event) => {
     event.respondWith(
       caches.match(event.request)
         .then((response) => {
@@ -58,9 +58,9 @@ self.addEventListener('fetch', (event) => {
         }
       )
     );
-  })
+  })*/
 
-  var cacheName = 'blog-img-1.jpg';
+var cacheName = 'blog-img-1.jpg';
 self.addEventListener('fetch', e => {
   console.log('Service Worker: Fetching');
   e.respondWith(
