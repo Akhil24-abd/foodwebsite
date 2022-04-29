@@ -85,7 +85,7 @@ self.addEventListener('fetch', e => {
   );
   });*/
 
-  var document = document.querySelector(".btn");
+  var document = document.querySelector('.btn');
      document.addEventListener("click", async () => {
      var swRegistration = await navigator.serviceWorker.register("sw.js");
      swRegistration.sync.register("helloSync").then(function () {
