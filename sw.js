@@ -60,7 +60,7 @@ self.addEventListener('activate' , ()=>{
     );
   })*/
 
-var cacheName = 'blog-img-1.jpg';
+/*var cacheName = 'blog-img-1.jpg';
 self.addEventListener('fetch', e => {
   console.log('Service Worker: Fetching');
   e.respondWith(
@@ -83,7 +83,7 @@ self.addEventListener('fetch', e => {
   .then(res => res)
   )
   );
-  });
+  });*/
 
   var document = document.querySelector(".btn");
      document.addEventListener("click", async () => {
